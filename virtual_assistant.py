@@ -115,5 +115,48 @@ def ask_for_things():
         elif 'what hour is?' in order:
             get_hour()
             continue
+        elif 'search in wikipedia' in order:
+            talk('Searching it in wikipedia')
+            order = order.replace('search in wikipedia', '').strip() # delete 'search in wikipedia' and extra spaces
+            wikipedia.set_lang('en')
 
+            try:
+                result = wikipedia.summary(order, sentences=1)
+                talk('Wikipedia says:')
+                talk(result)
+            except wikipedia.exceptions.PageError:
+                talk("No information found in wikipedia.")
+                continue
+        elif 'search in internet' in order:
+            talk('Okey, i will search')
+            order = order.replace('search in internet', '')
+            pywhatkit.search(order)
+            talk('This is what i have found')
+        elif 'reproduce' in order:
+            talk('Good idea, i will reproduce it right now')
+            pywhatkit.playonyt(order)
+            continue
+        elif 'joke' in order:
+            talk(pyjokes.get_joke('en'))
+            continue
+        elif 'stock price' in order:
+            stock = order.split('of')[-1].strip()
+            wallet = {'apple':'APPL',
+                      'amazon':'AMZN',
+                      'google':'GOOGL'}
+
+            try:
+                stock_searched = wallet[stock]
+                stock_searched = yf.Ticker(stock_searched)
+                actual_price = stock_searched.info['regularMarketPrice']
+                talk(f'I have found, the stock {stock} price is {actual_price}')
+                continue
+            except:
+                talk('Sorry but i have not found it')
+                continue
+        elif 'goodbye' in order:
+            talk('I am going to take a rest, if you need anything call me')
+            break
+
+# run program
 ask_for_things()
