@@ -51,5 +51,3 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Feel free to contribute to this project by creating issues, submitting pull requests, or adding new features.
 
 We hope you find Audio Assistant helpful and fun to use!
-
-vbnet
