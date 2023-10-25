@@ -24,31 +24,31 @@ To get started with Audio Assistant, follow these steps:
    ```
    
 2. Install the required dependencies:
-```bash
-pip install -r requirements.txt
-
-pipwin install pyaudio
-```
+   ```bash
+   pip install -r requirements.txt
+   
+   pipwin install pyaudio
+   ```
 
 3. Run the assistant:
-```bash
-python main.py
-```
+   ```bash
+   python main.py
+   ```
 
 ## Usage
 
-· Once the assistant is running, it will listen for your voice commands.
-· Give commands like "Search Google for the weather," "Tell me about Albert Einstein," or "Open YouTube."
-· The assistant will process your request and provide responses or perform actions accordingly.
+- Once the assistant is running, it will listen for your voice commands.
+- Give commands like "Search Google for the weather," "Tell me about Albert Einstein," or "Open YouTube."
+- The assistant will process your request and provide responses or perform actions accordingly.
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
 
-· This project is inspired by virtual assistants like Alexa and Siri.
-· Special thanks to the open-source community for various libraries used in this project.
-· Feel free to contribute to this project by creating issues, submitting pull requests, or adding new features.
+- This project is inspired by virtual assistants like Alexa and Siri.
+- Special thanks to the open-source community for various libraries used in this project.
+- Feel free to contribute to this project by creating issues, submitting pull requests, or adding new features.
 
 We hope you find Audio Assistant helpful and fun to use!
 
